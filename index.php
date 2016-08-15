@@ -47,22 +47,33 @@
    <h1>chapter</h1>
 <?php 
 
+$chapterContent = array();
+
 include('conn.php');
-$result = mysql_query("SELECT * FROM booklist where Bookname='qwe'");
+$result = mysql_query("SELECT * FROM booklist where Bookname='qwe'ORDER BY `ID` ASC");
 //$row = mysql_fetch_array($result);
 //  echo $row['Bookname'];
 //  echo "<br />";
 
 while ($row = mysql_fetch_array($result))
 {
+  $chapterName = $row['Chapter'];
+  $chapterContent[$chapterName] = $row['content'];
+
   echo "<h2>" . "<a href=\"index.php#" . $row['Chapter'] . "\">" . $row['Chapter'] . "</a></h2><br />";
 }
 
 // <a href="#Introduction"> .. </a>
 
- ?>
+foreach ($chapterContent as $_title => $_content) 
+{
+  echo "<h2><a name=\"#" . $_title . "\">" . $_title . "</a></h2>";
+  echo $_content;
+}
 
-<a name="#introduction"></a> <?php
+ ?>
+<!--<a name="#introduction"></a>--> 
+<?php /*
  include('conn.php');
 $result = mysql_query("SELECT * FROM booklist where Title='introduction'");
 	while ($row = mysql_fetch_array($result))
@@ -70,12 +81,12 @@ $result = mysql_query("SELECT * FROM booklist where Title='introduction'");
             echo $row['content'];
             echo "<br />";
           } 
- 
+ */
  ?>
-<br>
+<!--<br>
 
-<a name="#123123">
-<?php
+<a name="#123123">-->
+<?php /*
  include('conn.php');
 $result = mysql_query("SELECT * FROM booklist where Chapter='123123'");
   while ($row = mysql_fetch_array($result))
@@ -83,7 +94,7 @@ $result = mysql_query("SELECT * FROM booklist where Chapter='123123'");
             echo $row['content'];
             echo "<br />";
           } 
- 
+ */
  ?>
 
       </div>

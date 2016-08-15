@@ -29,7 +29,19 @@
     </div>
     <div class="bloglist">
       <h2>
-        <p>Bookname</p>
+        <p>Bookname : <?php
+         include('conn.php');
+        $result = mysql_query("SELECT * FROM booklist where ID='1'");
+
+
+        while ($row = mysql_fetch_array($result))
+          {
+            echo $row['Bookname'];
+            echo "<br />";
+          }
+          ?> </p>
+        
+        
       </h2>
       <div class="blogs">
      <?php 
