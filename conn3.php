@@ -3,7 +3,7 @@
 $host='localhost';//数据库服务器
 $user='root';//数据库USER
 $password='123123123';//数据库password
-$database='phpbokedans';//数据库名
+$database='newblog';//数据库名
 $conn=@mysql_connect($host,$user,$password) or die('数据库连接失败！');
 @mysql_select_db($database) or die('没有找到数据库！');
 mysql_query("set names 'gb2312'");

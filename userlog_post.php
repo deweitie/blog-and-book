@@ -18,6 +18,7 @@ include_once 'conn.php';
 			if($rowscount>0)
 			{
 					$_SESSION['username']=$username;
+					$_SESSION['cx']=mysql_result($query,0,"cx");
 					$_SESSION['xm']=mysql_result($query,$i,xingming);
 					$_SESSION['zp']=mysql_result($query,$i,zhaopian);
 					//$row = mysql_fetch_row($query)

@@ -10,11 +10,8 @@ mysql_query("update xinwentongzhi set dianjilv=dianjilv+1 where id=$id");
 <meta http-equiv="Content-Type" content="text/html; charset=gb2312">
 <style type="text/css">
 <!--
-.STYLE2 {
-	color: #FFFFFF;
-	font-weight: bold;
-}
-.STYLE3 {color: #6D2E18; font-weight: bold; }
+.STYLE4 {color: #FFFFFF}
+.STYLE5 {color: #ffffff}
 -->
 </style>
 </head>
@@ -31,12 +28,12 @@ mysql_query("update xinwentongzhi set dianjilv=dianjilv+1 where id=$id");
             <td valign="top"><table id="__01" width="725" height="740" border="0" cellpadding="0" cellspacing="0">
               
               <tr>
-                <td valign="top"><table id="__01" width="725" height="258" border="0" cellpadding="0" cellspacing="0">
+                <td valign="top"><table id="__01" width="700" height="258" border="0" cellpadding="0" cellspacing="0">
                   <tr>
-                    <td width="725" height="42" background="qtimages/1_02_02_01_01.gif"><table width="97%" border="0" align="center" cellpadding="0" cellspacing="0">
+                    <td width="650" height="42" bgcolor="#000000"><table width="97%" border="0" align="center" cellpadding="0" cellspacing="0">
                         <tr>
-                          <td width="17%" align="center" class="title">message board</td>
-                          <td width="83%"><div align="right"><a href="lyb.php" class="title">feedback</a></div></td>
+                          <td width="17%" align="center" class="title STYLE4">Comment</td>
+                          <td width="75%"><div align="right"><a href="lyb.php"><span class="STYLE5">feedback  </span></a></div></td>
                         </tr>
                     </table></td>
                   </tr>
@@ -97,11 +94,11 @@ if($pagecurrent>$pagecount)
                             </tr>
                             <tr>
                               <td height="78" align="left" valign="top">&nbsp;<?php echo mysql_result($query,$i,"liuyan");?></td>
-                              <td align="left" valign="top"><p>reply：</p>
+                              <td align="left" valign="top"><p>reply:</p>
                                   <p><?php echo mysql_result($query,$i,"huifu");?></p></td>
                             </tr>
                             <tr>
-                              <td colspan="2" align="left" valign="middle" style="height: 25px">&nbsp; &nbsp;user：<?php echo mysql_result($query,$i,"zhanghao");?> &nbsp; &nbsp;name：<?php echo mysql_result($query,$i,"xingming");?>&nbsp;&nbsp;</td>
+                              <td colspan="2" align="left" valign="middle" style="height: 25px">&nbsp; &nbsp;user:<?php echo mysql_result($query,$i,"zhanghao");?> &nbsp; &nbsp;name:<?php echo mysql_result($query,$i,"xingming");?>&nbsp;&nbsp;</td>
                             </tr>
                             <?php
 						  }

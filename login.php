@@ -21,16 +21,16 @@ include_once 'conn.php';
 					$_SESSION['cx']=mysql_result($query,0,"cx");
 					//$row = mysql_fetch_row($query)
 					//echo $_SESSION['cx'];
-					echo "<script language='javascript'>alert('login successful£¡');location='main.php';</script>";
+					echo "<script language='javascript'>alert('login successful');location='main.php';</script>";
 			}
 			else
 			{
-					echo "<script language='javascript'>alert('USER or password error£¡');history.back();</script>";
+					echo "<script language='javascript'>alert('USER or password error');history.back();</script>";
 			}
 		}
 		else
 		{
-				echo "<script language='javascript'>alert('please enter your username and password£¡');history.back();</script>";
+				echo "<script language='javascript'>alert('please enter your username and password');history.back();</script>";
 		}
 	}
 	

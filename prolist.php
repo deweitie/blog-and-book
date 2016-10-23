@@ -10,11 +10,7 @@ mysql_query("update xinwentongzhi set dianjilv=dianjilv+1 where id=$id");
 <meta http-equiv="Content-Type" content="text/html; charset=gb2312">
 <style type="text/css">
 <!--
-.STYLE2 {
-	color: #FFFFFF;
-	font-weight: bold;
-}
-.STYLE3 {color: #6D2E18; font-weight: bold; }
+.STYLE4 {color: #FFFFFF}
 -->
 </style>
 </head>
@@ -33,9 +29,9 @@ mysql_query("update xinwentongzhi set dianjilv=dianjilv+1 where id=$id");
               <tr>
                 <td valign="top"><table id="__01" width="725" height="258" border="0" cellpadding="0" cellspacing="0">
                   <tr>
-                    <td width="725" height="42" background="qtimages/1_02_02_01_01.gif"><table width="97%" border="0" align="center" cellpadding="0" cellspacing="0">
+                    <td width="725" height="42" bgcolor="#000000"><table width="97%" border="0" align="center" cellpadding="0" cellspacing="0">
                         <tr>
-                          <td width="17%" align="center" class="title">good Daily</td>
+                          <td width="17%" align="center" class="title STYLE4">Search your favourite blog </td>
                           <td width="83%">&nbsp;</td>
                         </tr>
                     </table></td>
@@ -44,7 +40,7 @@ mysql_query("update xinwentongzhi set dianjilv=dianjilv+1 where id=$id");
                     <td><table id="__01" width="725" height="208" border="0" cellpadding="0" cellspacing="0">
                         <tr>
                           <td width="10" background="qtimages/1_02_02_01_02_01.gif">&nbsp;</td>
-                          <td width="703" height="208" valign="top"><table width="96%" border="1" align="left" cellpadding="3" cellspacing="1" bordercolor="#FF6633" style="border-collapse:collapse">
+                          <td width="703" height="208" valign="top"><table width="96%" border="1" align="left" cellpadding="3" cellspacing="1" bordercolor="#000000" style="border-collapse:collapse">
                             <tr>
                               <td height="104"><form id="form1" name="form1" method="post" action="">
                                 search:number:
@@ -53,7 +49,7 @@ mysql_query("update xinwentongzhi set dianjilv=dianjilv+1 where id=$id");
                                 <input name="mc" type="text" id="mc" />
                                 <input type="submit" name="Submit" value="search" />
                                 </form>
-                                  <table width="100%" border="1" align="center" cellpadding="3" cellspacing="1" bordercolor="#FF6633" style="border-collapse:collapse">
+                                  <table width="100%" border="1" align="center" cellpadding="3" cellspacing="1" bordercolor="#000000" style="border-collapse:collapse">
                                     <tr>
                                       <td width="44" bgcolor='#EBE2FE'>number</td>
                                       <td width="509" bgcolor='#EBE2FE'>title</td>

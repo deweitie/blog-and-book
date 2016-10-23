@@ -10,10 +10,7 @@ $biaoti=$_POST["biaoti"];
 <meta http-equiv="Content-Type" content="text/html; charset=gb2312">
 <style type="text/css">
 <!--
-.STYLE2 {
-	color: #FFFFFF;
-	font-weight: bold;
-}
+.STYLE3 {color: #FFFFFF}
 -->
 </style>
 </head>
@@ -32,9 +29,9 @@ $biaoti=$_POST["biaoti"];
               <tr>
                 <td valign="top"><table id="__01" width="725" height="258" border="0" cellpadding="0" cellspacing="0">
                   <tr>
-                    <td width="725" height="42" background="qtimages/1_02_02_01_01.gif"><table width="97%" border="0" align="center" cellpadding="0" cellspacing="0">
+                    <td width="725" height="42" bgcolor="#000000"><table width="97%" border="0" align="center" cellpadding="0" cellspacing="0">
                         <tr>
-                          <td width="17%" align="center" class="title"><?php echo $lb;?></td>
+                          <td width="17%" align="center" class="title"><span class="STYLE3"><?php echo $lb;?></span></td>
                           <td width="83%">&nbsp;</td>
                         </tr>
                     </table></td>
@@ -95,7 +92,7 @@ if($pagecurrent>$pagecount)
 {
   ?>
                             <tr height="25">
-                              <td width="2%" align="right" class="newsline">·</td>
+                              <td width="2%" align="right" class="newsline">.</td>
                               <td width="65%" class="newsline"><a href="gg_detail.php?id=<?php echo mysql_result($query,$i,"id");?>"><?php echo mysql_result($query,$i,"biaoti");?></a></td>
                               <td width="11%" class="newsline">clicked <?php echo mysql_result($query,$i,"dianjilv");?> times</td>
                               <td width="22%" class="newsline"><?php echo mysql_result($query,$i,"addtime");?></td>

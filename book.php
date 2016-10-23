@@ -29,7 +29,10 @@
       </ul>
     </div>
     <div class="bloglist">
-      <h2>
+
+    <h2>
+        Book &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[<a href="blog.php"> Display as Blog </a> ] <p>
+
         <p> <?php 
       
         include('conn2.php');
@@ -49,25 +52,25 @@
 
 $chapterContent = array();
 
-include('conn2.php');
-$result = mysql_query("SELECT * FROM booklist where Bookname='qwe'ORDER BY `ID` ASC");
+include('conn3.php');
+$result = mysql_query("SELECT * FROM Blog ORDER BY `ID` ASC");
 //$row = mysql_fetch_array($result);
 //  echo $row['Bookname'];
 //  echo "<br />";
 
 while ($row = mysql_fetch_array($result))
 {
-  $chapterName = $row['Chapter'];
-  $chapterContent[$chapterName] = $row['content'];
+  $chapterName = $row['Post_Title'];
+  $chapterContent[$chapterName] = $row['Post_text'];
 
-  echo "<h2>" . "<a href=\"bookindex.php#" . $row['Chapter'] . "\">" . $row['Chapter'] . "</a></h2><br />";
+  echo "<h2>" . "<a href=\"#" . $chapterName . "\">" . $chapterName . "</a></h2><br />";
 }
 
 // <a href="#Introduction"> .. </a>
 
 foreach ($chapterContent as $_title => $_content) 
 {
-  echo "<h2><a name=\"#" . $_title . "\">" . $_title . "</a></h2>";
+  echo "<h2><a name=\"" . $_title . "\">" . $_title . "</a></h2>";
   echo $_content;
 }
 
@@ -104,7 +107,7 @@ $result = mysql_query("SELECT * FROM booklist where Chapter='123123'");
 	
 
     <div class="topspaceinfo">
-      <h1></h1>
+      <h1><a href= blog.php>Sort By Date </h1>
       <p></p>
     </div>
     <div class="about_c">

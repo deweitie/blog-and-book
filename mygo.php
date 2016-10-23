@@ -2,7 +2,7 @@
 session_start();
 
 	//echo $_SESSION['cx'];
-	if($_SESSION['cx']=="会员")
+	if($_SESSION['cx']=="member")
 	{
 		echo "<script>javascript:location.href='left2.html';</script>";
 	}
@@ -11,7 +11,7 @@ session_start();
 	{
 		echo "<script>javascript:location.href='left2.html';</script>";
 	}
-	if($_SESSION['cx']=="老师")
+	if($_SESSION['cx']=="teacher")
 	{
 		echo "<script>javascript:location.href='left3.html';</script>";
 	}

@@ -8,7 +8,7 @@
 <body>
 <table width="66%" height="68%" border="0" cellpadding="5" cellspacing="5">
   <tr>
-    <td valign="top"><p>reset¡µ¡µ¡µ </p>
+    <td valign="top"><p>reset&gt;&gt;&gt;</p>
       <p><br>
         Blog and Book </p>
  

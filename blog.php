@@ -18,35 +18,37 @@
     <h1>EB-Blog</h1>
     <h2>
     </h2>
-    <div class="logo"><a href="/"></a></div>
+    <div class="logo"><a href="index.php"></a></div>
     <nav id="topnav">
   </header>
   <article>
     <div class="banner">
       <ul class="texts">
-
+		
       </ul>
     </div>
     <div class="bloglist">
       <h2>
-        <p>Bookname : <?php
-         include('conn.php');
-        $result = mysql_query("SELECT * FROM booklist where ID='1'");
+        Blog &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[<a href="book.php"> Display as Book </a> ] <p>
+		<?php
+         include('conn3.php');
+        $result = mysql_query("SELECT * FROM book where ID='1'");
 
 
         while ($row = mysql_fetch_array($result))
           {
-            echo $row['Bookname'];
+            echo $row['Name'];
             echo "<br />";
           }
           ?> </p>
+		  
         
         
       </h2>
       <div class="blogs">
    <?php 
 							  
-    $sql="select  * from  xinwentongzhi  order by id desc limit 100  ";
+    $sql="select  * from  blog  order by id desc limit 100  ";
  
  
   
@@ -69,7 +71,9 @@
                                 
 								
 								 <tr>
-                                  <td height="20" align="center"><a href="gg_detail.php?id=<?php echo mysql_result($query,$i,"id");?>"><?php echo mysql_result($query,$i,"biaoti");?></a></td>  <td height="20" align="center"><?php echo mysql_result($query,$i,"addtime");?></br></td>
+                                  <td height="20" align="center"><h3>Title : <?php echo mysql_result($query,$i,"Post_Title");?> </a></br></td>  <td height="20" align="center">Date: <?php echo mysql_result($query,$i,"Post_date");?></h3></br><?php echo mysql_result($query,$i,"Post_text");?></br><br>
+<a href="addtobook.php?post_id=<?php echo mysql_result($query,$i,"ID");?>"> Add Post to Book</a><br><br>							  
+								  </td>
                                 </tr>
                                 
                           
@@ -81,10 +85,10 @@
     </div>
   </article>
   <aside>
-    <div class="sgin"><a href="file:///C|/Users/junpeng/Desktop/Blog&Book/signin.html"><span>Sign out</span></a></div>
+    <div class="sgin"><a href="file:///C|/Users/junpeng/Desktop/Blog&Book/signin.html"><span></span></a></div>
     <div class="tj_news">
       <h2>
-        <p class="tj_t1">Book</p>
+        <p class="tj_t1"><a href= book.php>Book</p>
       </h2>
     </div>
 	

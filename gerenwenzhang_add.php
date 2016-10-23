@@ -2,6 +2,7 @@
 session_start();
 include_once 'conn.php';
 include_once 'sinaEditor.class.php';
+date_default_timezone_set('PRC');
 extract($_POST);
 extract($_GET);
 $editor=new sinaEditor('neirong');
@@ -41,7 +42,7 @@ if ($addnew=="1" )
 }
 </script>
 <body>
-<p>add Personal£º Date£º <?php echo $ndate; ?></p>
+<p>add Personal: Date: <?php echo $ndate; ?></p>
 <script language="javascript">
 	function check()
 {
@@ -54,12 +55,20 @@ if ($addnew=="1" )
 </script>
 <form id="form1" name="form1" method="post" action="">
 <table width="100%" border="1" align="center" cellpadding="3" cellspacing="1" bordercolor="#FF6633" style="border-collapse:collapse">    
-	<tr><td>title£º</td><td><input name='biaoti' type='text' id='biaoti' value='' size='50'  />&nbsp;*</td></tr><tr><td>content£º</td><td><?php $editor->Create();?></td></tr><tr><td>attacher£º</td><td><input name='fujian' type='text' id='fujian' value='' size='50'  />&nbsp;<a href="javaScript:OpenScript('upfile.php?Result=fujian',460,180)"><img src="Images/Upload.gif" width="30" height="16" border="0" align="absmiddle" /></a></td></tr><tr><td>Publisher£º</td><td><input name='faburen' type='text' id='faburen' value='<?php echo $_SESSION['username'];?>' />&nbsp;*</td></tr>
+	<tr>
+	  <td>title:</td>
+	  <td><input name='biaoti' type='text' id='biaoti' value='' size='50'  />&nbsp;*</td></tr><tr>
+	    <td>content:</td>
+	    <td><?php $editor->Create();?></td></tr><tr>
+	      <td>attacher:</td>
+	      <td><input name='fujian' type='text' id='fujian' value='' size='50'  />&nbsp;<a href="javaScript:OpenScript('upfile.php?Result=fujian',460,180)"><img src="Images/Upload.gif" width="30" height="16" border="0" align="absmiddle" /></a></td></tr><tr>
+	        <td>Publisher:</td>
+	        <td><input name='faburen' type='text' id='faburen' value='<?php echo $_SESSION['username'];?>' />&nbsp;*</td></tr>
 
     <tr>
       <td>&nbsp;</td>
       <td><input type="hidden" name="addnew" value="1" />
-        <input type="submit" name="Submit" value="add" onclick="return check();" />
+        <input type="submit" name="Submit" value="add" onClick="return check();" />
       <input type="reset" name="Submit2" value="reset" /></td>
     </tr>
   </table>

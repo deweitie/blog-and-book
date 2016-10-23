@@ -22,11 +22,7 @@ if ($addnew=="1" )
 <meta http-equiv="Content-Type" content="text/html; charset=gb2312">
 <style type="text/css">
 <!--
-.STYLE2 {
-	color: #FFFFFF;
-	font-weight: bold;
-}
-.STYLE3 {color: #6D2E18; font-weight: bold; }
+.STYLE4 {color: #FFFFFF}
 -->
 </style>
 </head>
@@ -45,9 +41,9 @@ if ($addnew=="1" )
               <tr>
                 <td valign="top"><table id="__01" width="725" height="258" border="0" cellpadding="0" cellspacing="0">
                   <tr>
-                    <td width="725" height="42" background="qtimages/1_02_02_01_01.gif"><table width="97%" border="0" align="center" cellpadding="0" cellspacing="0">
+                    <td width="725" height="42" bgcolor="#000000"><table width="97%" border="0" align="center" cellpadding="0" cellspacing="0">
                         <tr>
-                          <td width="17%" align="center" class="title">feedbook</td>
+                          <td width="17%" align="center" class="title STYLE4">feedback</td>
                           <td width="83%"><div align="right"><a href="lyblist.php" class="title">message already</a></div></td>
                         </tr>
                     </table></td>

@@ -1,7 +1,9 @@
 <?php 
 $id=$_GET["id"];
 include_once 'conn.php';
+date_default_timezone_set("PRC");
 $ndate =date("Y-m-d");
+
 $addnew=$_POST["addnew"];
 if ($addnew=="1" )
 {

@@ -1,6 +1,7 @@
 <?php 
 session_start();
 include_once 'conn.php';
+date_default_timezone_set('PRC'); 
 $ndate =date("Y-m-d");
 $addnew=$_POST["addnew"];
 if ($addnew=="1" )
@@ -33,7 +34,7 @@ if ($addnew=="1" )
 }
 </script>
 <body>
-<p>add daily information£º date£º <?php echo $ndate; ?></p>
+<p>add daily information: date: <?php echo $ndate; ?></p>
 <script language="javascript">
 	function check()
 {
@@ -46,12 +47,26 @@ if ($addnew=="1" )
 </script>
 <form id="form1" name="form1" method="post" action="">
 <table width="100%" border="1" align="center" cellpadding="3" cellspacing="1"  bordercolor="#FF6633" style="border-collapse:collapse">    
-	<tr><td>number£º</td><td><input name='bianhao' type='text' id='bianhao' value='' />&nbsp;*</td></tr><tr><td>title£º</td><td><input name='mingcheng' type='text' id='mingcheng' value='' size='50'  />&nbsp;*</td></tr><tr><td>category£º</td><td><select name='leibie' id='leibie'><?php getoption("rizhileibie","leibie")?></select></td></tr><tr><td>picture£º</td><td><input name='tupian' type='text' id='tupian' value='' size='50'  />&nbsp;<a href="javaScript:OpenScript('upfile.php?Result=tupian',460,180)"><img src="Images/Upload.gif" width="30" height="16" border="0" align="absmiddle" /></a></td></tr><tr><td>intor£º</td><td><textarea name='jianjie' cols='50' rows='8' id='jianjie'></textarea></td></tr><tr><td>else£º</td><td><input name='jiage' type='text' id='jiage' value='' />&nbsp;*</td></tr><tr><td>Publisher£º</td><td><input name='faburen' type='text' id='faburen' value='<?php echo $_SESSION["username"]?>' />&nbsp;*</td></tr>
+	<tr>
+	  <td>number:</td>
+	  <td><input name='bianhao' type='text' id='bianhao' value='' />&nbsp;*</td></tr><tr>
+	  <td>title:</td>
+	  <td><input name='mingcheng' type='text' id='mingcheng' value='' size='50'  />&nbsp;*</td></tr><tr>
+	  <td>category:</td>
+	  <td><select name='leibie' id='leibie'><?php getoption("rizhileibie","leibie")?></select></td></tr><tr>
+	    <td>picture:</td>
+	    <td><input name='tupian' type='text' id='tupian' value='' size='50'  />&nbsp;<a href="javaScript:OpenScript('upfile.php?Result=tupian',460,180)"><img src="Images/Upload.gif" width="30" height="16" border="0" align="absmiddle" /></a></td></tr><tr>
+	    <td>intor:</td>
+	    <td><textarea name='jianjie' cols='50' rows='8' id='jianjie'></textarea></td></tr><tr>
+	    <td>else:</td>
+	    <td><input name='jiage' type='text' id='jiage' value='' />&nbsp;*</td></tr><tr>
+	    <td>Publisher:</td>
+	    <td><input name='faburen' type='text' id='faburen' value='<?php echo $_SESSION["username"]?>' />&nbsp;*</td></tr>
 
     <tr>
       <td>&nbsp;</td>
       <td><input type="hidden" name="addnew" value="1" />
-        <input type="submit" name="Submit" value="add" onclick="return check();" />
+        <input type="submit" name="Submit" value="add" onClick="return check();" />
       <input type="reset" name="Submit2" value="reset" /></td>
     </tr>
   </table>

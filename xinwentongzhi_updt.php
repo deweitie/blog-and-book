@@ -1,5 +1,6 @@
 <?php 
 $id=$_GET["id"];
+date_default_timezone_set("PRC");
 include_once 'conn.php';
 include_once 'sinaEditor.class.php';
 extract($_POST);

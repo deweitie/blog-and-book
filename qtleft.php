@@ -14,14 +14,20 @@ function userlogs()
 		return false;
 	}
 }
-</script><table id="__01" width="244"    border="1" align="center" cellpadding="3" cellspacing="1"  bordercolor="#f2ac4a" style="border-collapse:collapse"  >
+</script>
+<style type="text/css">
+<!--
+.STYLE1 {color: #FFFFFF}
+-->
+</style>
+<table id="__01" width="244"    border="1" align="center" cellpadding="3" cellspacing="1"  bordercolor="#000000" style="border-collapse:collapse"  >
                
               <tr>
                 <td valign="top"><table id="__01" width="244" height="152" border="0" cellpadding="0" cellspacing="0">
                   <tr>
-                    <td width="244" height="39"  bgcolor="#f2ac4a" ><table  width="97%" border="0" align="center" cellpadding="0" cellspacing="0">
+                    <td width="244" height="39"  bgcolor="#000000" ><table  width="97%" border="0" align="center" cellpadding="0" cellspacing="0">
                         <tr>
-                          <td width="52%" align="center" class="title">LOGIN</td>
+                          <td width="52%" align="center" class="title STYLE1">LOGIN</td>
                           <td width="48%">&nbsp;</td>
                         </tr>
                     </table></td>
@@ -61,13 +67,13 @@ function userlogs()
 				 ?>
                             <table width="100%" height="100%" border="0" align="center" cellpadding="0" cellspacing="0">
                               <tr>
-                                <td align="left">user£º<?php echo $_SESSION['username']?></td>
+                                <td align="left">user:<?php echo $_SESSION['username']?></td>
                               </tr>
                               <tr>
-                                <td align="left">you are £º<?php echo $_SESSION['cx']?></td>
+                                <td align="left">you are : <?php echo $_SESSION['cx']?></td>
                               </tr>
                               <tr>
-                                <td align="left"> !¡ú<a href="yonghu.php?zhanghao=<?php echo $_SESSION['username']?>"> </a></td>
+                                <td align="left"> !</td>
                               </tr>
                               <tr>
                                 <td align="center"><input type="button" name="Submit3" value="exit" onclick="javascript:location.href='logout.php';" style=" height:19px; border:solid 1px #000000; color:#666666" />
@@ -87,9 +93,9 @@ function userlogs()
 				
 				<table id="__01" width="244" height="152" border="0" cellpadding="0" cellspacing="0">
                   <tr>
-                    <td width="244" height="39"  bgcolor="#f2ac4a" ><table  width="97%" border="0" align="center" cellpadding="0" cellspacing="0">
+                    <td width="244" height="39"  bgcolor="#000000" ><table  width="97%" border="0" align="center" cellpadding="0" cellspacing="0">
                         <tr>
-                          <td width="52%" align="center" class="title">top</td>
+                          <td width="52%" align="center" class="title STYLE1">Top</td>
                           <td width="48%">&nbsp;</td>
                         </tr>
                     </table></td>

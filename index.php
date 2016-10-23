@@ -8,10 +8,8 @@ include_once 'conn.php';
 <meta http-equiv="Content-Type" content="text/html; charset=gb2312">
 <style type="text/css">
 <!--
-.STYLE2 {
-	color: #FFFFFF;
-	font-weight: bold;
-}
+.STYLE3 {color: #FFFFFF}
+.STYLE4 {color: #FFFF80}
 -->
 </style>
 </head>
@@ -21,7 +19,7 @@ include_once 'conn.php';
 		<td><?php include_once 'qttop.php';?></td>
 	</tr>
 	<tr>
-		<td><table id="__01" width="969" height="740" border="0" cellpadding="0" cellspacing="0">
+		<td><table id="__01" width="929" height="740" border="0" cellpadding="0" cellspacing="0">
           <tr>
             <td valign="top">
 <?php include_once 'qtleft.php';?></td>
@@ -29,17 +27,17 @@ include_once 'conn.php';
               <tr>
                 <td valign="top"><table id="__01" width="725" height="258" border="0" cellpadding="0" cellspacing="0">
                   <tr>
-                    <td width="725" height="42" background="qtimages/1_02_02_01_01.gif"><table width="97%" border="0" align="center" cellpadding="0" cellspacing="0">
+                    <td width="680" height="42" bgcolor="#000000"><table width="90%" border="0" align="center" cellpadding="0" cellspacing="0">
                       <tr>
-                        <td width="17%" align="center" class="title"><a href="news.asp?lb=news">News</a></td>
-                        <td width="83%">&nbsp;</td>
-                      </tr>
+                        <td width="17%" align="center"><a href="news.asp?lb=news"><span class="STYLE3">News</span></a></td>
+                        <td>&nbsp;</td>
+                        ></tr>
                     </table></td>
                   </tr>
                   <tr>
                     <td><table id="__01" width="725" height="208" border="0" cellpadding="0" cellspacing="0">
                       <tr>
-                        <td><img src="qtimages/1_02_02_01_02_01.gif" width="10" height="208" alt=""></td>
+                        <td width="10"><img src="qtimages/1_02_02_01_02_01.gif" width="10" height="208" alt=""></td>
                         <td width="228" height="208"><SCRIPT type=text/javascript>
 var focus_width=228;
 var focus_height=188;
@@ -94,7 +92,7 @@ document.write('<embed src="qtimages/pixviewer.swf" wmode="opaque" FlashVars="pi
 					  }
 					  ?>
                         </table></td>
-                        <td><img src="qtimages/1_02_02_01_02_04.gif" width="12" height="208" alt=""></td>
+                        <td width="12"><img src="qtimages/1_02_02_01_02_04.gif" width="12" height="208" alt=""></td>
                       </tr>
                     </table></td>
                   </tr>
@@ -109,9 +107,9 @@ document.write('<embed src="qtimages/pixviewer.swf" wmode="opaque" FlashVars="pi
                   
                     <td><table id="__01" width="720" height="215" border="0" cellpadding="0" cellspacing="0">
                       <tr>
-                        <td width="720" height="40" background="qtimages/1_02_02_02_02_01.jpg"><table width="97%" border="0" align="center" cellpadding="0" cellspacing="0">
+                        <td width="720" height="40" bgcolor="#000000"><table width="97%" border="0" align="center" cellpadding="0" cellspacing="0">
                           <tr>
-                            <td width="17%" align="center" class="title">funny story </td>
+                            <td width="17%" align="center" class="title STYLE4">funny story </td>
                             <td width="83%">&nbsp;</td>
                           </tr>
                         </table></td>

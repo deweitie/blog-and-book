@@ -1,6 +1,7 @@
 <?php 
 include_once 'conn.php';
-$ndate =date("Y-m-d");
+date_default_timezone_set('PRC');
+$ndate =date("Y-m-d H:i:s");
 $addnew=$_POST["addnew"];
 if ($addnew=="1" )
 {
@@ -20,11 +21,7 @@ if ($addnew=="1" )
 <meta http-equiv="Content-Type" content="text/html; charset=gb2312">
 <style type="text/css">
 <!--
-.STYLE2 {
-	color: #FFFFFF;
-	font-weight: bold;
-}
-.STYLE3 {color: #6D2E18; font-weight: bold; }
+.STYLE5 {color: #FFFFFF}
 -->
 </style>
 </head>
@@ -64,9 +61,9 @@ if ($addnew=="1" )
               <tr>
                 <td valign="top"><table id="__01" width="725" height="258" border="0" cellpadding="0" cellspacing="0">
                   <tr>
-                    <td width="725" height="42" background="qtimages/1_02_02_01_01.gif"><table width="97%" border="0" align="center" cellpadding="0" cellspacing="0">
+                    <td width="725" height="42" bgcolor="#000000"><table width="97%" border="0" align="center" cellpadding="0" cellspacing="0">
                         <tr>
-                          <td width="17%" align="center" class="title">user</td>
+                          <td width="17%" align="center" ><span class="STYLE5">User</span></td>
                           <td width="83%">&nbsp;</td>
                         </tr>
                     </table></td>
@@ -78,29 +75,29 @@ if ($addnew=="1" )
                           <td width="703" height="208" valign="top"><form name="form1" method="post" action="">
                             <table width="100%" border="1" align="center" cellpadding="3" cellspacing="1" bordercolor="#B8D8E8" style="border-collapse:collapse">
                               <tr>
-                                <td>usermane：</td>
+                                <td>Usermane:</td>
                                 <td><input name='zhanghao' type='text' id='zhanghao' value='' />
                                   &nbsp;*</td>
                               </tr>
                               <tr>
-                                <td>password：</td>
+                                <td>Password:</td>
                                 <td><input name='mima' type='text' id='mima' value='' />
                                   &nbsp;*</td>
                               </tr>
                               <tr>
-                                <td>name：</td>
+                                <td>Name:</td>
                                 <td><input name='xingming' type='text' id='xingming' value='' />
                                   &nbsp;*</td>
                               </tr>
                               <tr>
-                                <td>sex：</td>
+                                <td>Sex:</td>
                                 <td><select name='xingbie' id='xingbie'>
                                     <option value="male"selected> male</option>
                                     <option value="female" selected>female</option>
                                 </select></td>
                               </tr>
                               <tr>
-                                <td>area：</td>
+                                <td>Area:</td>
                                 <td><select name='diqu' id='diqu'>
                                     <option value="Beijing" selected>Beijing</option>
                                     <option value="Cairns">Cairns</option>
@@ -109,17 +106,17 @@ if ($addnew=="1" )
                                 </select></td>
                               </tr>
                               <tr>
-                                <td>Email：</td>
+                                <td>Email:</td>
                                 <td><input name='Email' type='text' id='Email' value='' />
                                   &nbsp;*</td>
                               </tr>
                               <tr>
-                                <td>Picture：</td>
+                                <td>Picture:</td>
                                 <td><input name='zhaopian' type='text' id='zhaopian' value='' size='50'  />
                                   &nbsp;* <a href="javaScript:OpenScript('upfile.php?Result=zhaopian',460,180)"><img src="Images/Upload.gif" width="30" height="16" border="0" align="absmiddle" /></a></td>
                               </tr>
                               <tr>
-                                <td>identity：</td>
+                                <td>Identity:</td>
                                 <td><select name="cx" id="cx">
                                   <option value="member">member</option>
                            

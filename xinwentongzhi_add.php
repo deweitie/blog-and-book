@@ -1,7 +1,9 @@
 <?php
 session_start();
 include_once 'conn.php';
+
 include_once 'sinaEditor.class.php';
+date_default_timezone_set('PRC');
 extract($_POST);
 extract($_GET);
 $editor=new sinaEditor('neirong');
@@ -17,6 +19,7 @@ if ($addnew=="1" )
 {
 	$biaoti=$_POST["biaoti"];$leibie=$_POST["leibie"];$neirong=$_POST["neirong"];$shouyetupian=$_POST["shouyetupian"];$dianjilv=$_POST["dianjilv"];$tianjiaren=$_POST["tianjiaren"];
 	$sql="insert into xinwentongzhi(biaoti,leibie,neirong,shouyetupian,dianjilv,tianjiaren) values('$biaoti','$leibie','$neirong','$shouyetupian','$dianjilv','$tianjiaren') ";
+
 	mysql_query($sql);
 	echo "<script>javascript:alert('add successful!');location.href='xinwentongzhi_add.php?lb=$lb';</script>";
 }
@@ -70,7 +73,7 @@ if ($addnew=="1" )
 }
 </script>
 <body>
-<p>add news£º date£º <?php echo $ndate; ?></p>
+<p>add news: date: <?php echo $ndate; ?></p>
 <script language="javascript">
 	function check()
 {
@@ -83,7 +86,17 @@ if ($addnew=="1" )
 </script>
 <form id="form1" name="form1" method="post" action="">
 <table width="100%" border="1" align="center" cellpadding="3" cellspacing="1" bordercolor="#366ec9" style="border-collapse:collapse">    
-	<tr><td>title£º</td><td><input name='biaoti' type='text' id='biaoti' value='' size='50'  />&nbsp;*</td></tr><tr><td>category£º</td><td><input name='leibie' type='text' id='leibie' value='<?php echo $lb;?>' />&nbsp;*</td></tr><tr><td>content£º</td><td><textarea name="neirong" style="width:700px;height:200px;visibility:hidden;"></textarea></td></tr><tr><td>index picture£º</td><td><input name='shouyetupian' type='text' id='shouyetupian' value='' size='50'  />&nbsp;<a href="javaScript:OpenScript('upfile.php?Result=shouyetupian',460,180)"><img src="Images/Upload.gif" width="30" height="16" border="0" align="absmiddle" /></a></td></tr><tr><td>click rate£º</td><td><input name='dianjilv' type='text' id='dianjilv' value='1' /></td></tr><tr>
+	<tr>
+	  <td>title:</td>
+	  <td><input name='biaoti' type='text' id='biaoti' value='' size='50'  />&nbsp;*</td></tr><tr>
+	    <td>category:</td>
+	    <td><input name='leibie' type='text' id='leibie' value='<?php echo $lb;?>' />&nbsp;*</td></tr><tr>
+	      <td>content:</td>
+	      <td><textarea name="neirong" style="width:700px;height:200px;visibility:hidden;"></textarea></td></tr><tr>
+	        <td>index picture:</td>
+	        <td><input name='shouyetupian' type='text' id='shouyetupian' value='' size='50'  />&nbsp;<a href="javaScript:OpenScript('upfile.php?Result=shouyetupian',460,180)"><img src="Images/Upload.gif" width="30" height="16" border="0" align="absmiddle" /></a></td></tr><tr>
+	          <td>click rate:</td>
+	          <td><input name='dianjilv' type='text' id='dianjilv' value='1' /></td></tr><tr>
 	  <td>Publisher</td>
 	  <td><input name='tianjiaren' type='text' id='tianjiaren' value='<?php echo $_SESSION["username"]; ?>' />&nbsp;*</td></tr>
 

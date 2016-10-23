@@ -27,7 +27,7 @@ body {
 <body>  <table width="100%" border="0" align="center" bgcolor="#6699CC">
   <tr>
    
-    <td width="20%" bgcolor="#6699CC">&nbsp;<font size="4">¡õ¡úBlog and Book </font></td>
+    <td width="20%" bgcolor="#6699CC">&nbsp;<font size="4">Blog and Book </font></td>
     <td width="42%"></td>
 			 <td width="11%" height="73"  >&nbsp;user:
     <?php

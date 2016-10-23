@@ -4,8 +4,9 @@ include_once 'checkA.php';
 
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+
 <title> </title>
+
 </head>
 
 <frameset rows="61,*,24" cols="*" framespacing="0" frameborder="no" border="0">

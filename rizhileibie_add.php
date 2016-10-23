@@ -1,5 +1,6 @@
 <?php 
 include_once 'conn.php';
+date_default_timezone_set('PRC');
 $ndate =date("Y-m-d");
 $addnew=$_POST["addnew"];
 if ($addnew=="1" )
@@ -32,7 +33,7 @@ if ($addnew=="1" )
 }
 </script>
 <body>
-<p>add category£º date£º <?php echo $ndate; ?></p>
+<p>add category: date: <?php echo $ndate; ?></p>
 <script language="javascript">
 	function check()
 {
@@ -45,12 +46,14 @@ if ($addnew=="1" )
 </script>
 <form id="form1" name="form1" method="post" action="">
 <table width="100%" border="1" align="center" cellpadding="3" cellspacing="1" bordercolor="#FF6633" style="border-collapse:collapse">    
-	<tr><td>category£º</td><td><input name='leibie' type='text' id='leibie' value='' />&nbsp;*</td></tr>
+	<tr>
+	  <td>category:</td>
+	  <td><input name='leibie' type='text' id='leibie' value='' />&nbsp;*</td></tr>
 
     <tr>
       <td>&nbsp;</td>
       <td><input type="hidden" name="addnew" value="1" />
-        <input type="submit" name="Submit" value="add" onclick="return check();" />
+        <input type="submit" name="Submit" value="add" onClick="return check();" />
       <input type="reset" name="Submit2" value="reset" /></td>
     </tr>
   </table>

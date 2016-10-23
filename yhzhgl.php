@@ -29,7 +29,7 @@ include_once 'conn.php';
 			}
 			else
 			{
-				//date_default_timezone_set("PRC");
+				date_default_timezone_set("PRC");
 				
 				$ndate =date("Y-m-d H:i:s");
 
@@ -50,7 +50,7 @@ include_once 'conn.php';
 </head>
 
 <body>
-<p>add new manager£º</p>
+<p>add new manager:</p>
 <script language="javascript">
 	function check()
 	{
@@ -84,18 +84,18 @@ include_once 'conn.php';
 </script>
 <form id="form1" name="form1" method="post" action="">
 <table width="100%" border="1" align="center" cellpadding="3" cellspacing="1" bordercolor="#FF6633" style="border-collapse:collapse">    <tr>
-      <td>USER£º</td>
+      <td>USER:</td>
       <td><input name="username" type="text" id="username" />
       *
       <input name="addnew" type="hidden" id="addnew" value="1" /></td>
     </tr>
     <tr>
-      <td>password£º</td>
+      <td>password:</td>
       <td><input name="pwd1" type="password" id="pwd1" />
       *</td>
     </tr>
     <tr>
-      <td>confirm password£º</td>
+      <td>confirm password:</td>
       <td><input name="pwd2" type="password" id="pwd2" />
       *</td>
     </tr>
@@ -113,7 +113,7 @@ include_once 'conn.php';
     </tr>
   </table>
 </form>
-<p>manager list£º</p>
+<p>manager list:</p>
 <table width="100%" border="1" align="center" cellpadding="3" cellspacing="1" bordercolor="#FF6633" style="border-collapse:collapse">  
   <tr>
     <td bgcolor="A4B6D7">id</td>
